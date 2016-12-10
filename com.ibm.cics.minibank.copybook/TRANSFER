@@ -1,8 +1,0 @@
-           10 SOURCE-ACCOUNT       PIC X(10).                           00010000
-           10 TARGET-ACCOUNT       PIC X(10).                           00020000
-           10 TRANS-AMOUNT         PIC 9(12)V9(3).                      00030000
-           10 TRANS-TIME           PIC X(19).                           00040000
-           10 TRAN-RESULT          PIC X(01).                           00050000
-           10 ERROR-MSG            PIC X(65).                           00060000
-           10 SOURCE-BALANCE       PIC 9(12)V9(3).                      00070000
-           10 TARGET-BALANCE       PIC 9(12)V9(3).                      00080000

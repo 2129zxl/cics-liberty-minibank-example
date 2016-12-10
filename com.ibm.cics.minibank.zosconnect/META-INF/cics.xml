@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<manifest xmlns="http://www.ibm.com/xmlns/prod/cics/bundle" id="com.ibm.cics.minibank.zosconnect" bundleMajorVer="1" bundleMinorVer="0" bundleMicroVer="0" bundleVersion="1" bundleRelease="0" build="IntA-201406261937">
-    <meta_directives>
-        <timestamp>2015-03-13T10:03:11.950+08:00</timestamp>
-    </meta_directives>
-    <define name="ZOSCONN" type="http://www.ibm.com/xmlns/prod/cics/bundle/PIPELINE" path="ZOSCONN.pipeline"/>
-    <define name="ZOSCONN" type="http://www.ibm.com/xmlns/prod/cics/bundle/JVMSERVER" path="ZOSCONN.jvmserver"/>
-</manifest>

@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><cicsdefinitiontransaction xmlns="http://www.ibm.com/xmlns/prod/CICS/smw2int" description="MIRROR TRANSACTION FOR QUERY ACCOUNT" isolate="YES" localq="N_A" name="CACJ" profile="DFHCICSA" program="DFHMIRS" shutdown="DISABLED" taskdatakey="USER" taskdataloc="ANY"/>
