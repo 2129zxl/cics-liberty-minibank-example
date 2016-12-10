@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+	<title>IBM - MiniBank - Error...</title>
+	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<link href="../bower_components/metisMenu/dist/metisMenu.min.css"
+		rel="stylesheet" />
+	<link href="../dist/css/sb-admin-2.css" rel="stylesheet" />
+	<link href="../bower_components/font-awesome/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+</h:head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation"
+			style="margin-bottom: 0">
+			<ui:include src="../include/sidebar.xhtml" />
+		</nav>
+		<div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="page-header">
+						<h1 id="navbar">Error!</h1>
+					</div>
+
+					<div class="bs-component">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4>JCA Connection Not Avaliable ...</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row" style="margin-top: 40px; margin-bottom: 30px">
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<div class="alert alert-danger alert-dismissable">
+											<h:outputText value="JCA Connection hasn't been set correcly,Please add the JCA feature in server.xml file" />
+										</div>
+									</div>
+									<div class="col-md-2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	<script src="../dist/js/sb-admin-2.js"></script>
+</body>
+</html>

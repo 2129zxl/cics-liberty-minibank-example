@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+	<title>IBM - MiniBank - Create Account</title>
+	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<link href="../bower_components/metisMenu/dist/metisMenu.min.css"
+		rel="stylesheet" />
+	<link href="../dist/css/sb-admin-2.css" rel="stylesheet" />
+	<link href="../bower_components/font-awesome/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+</h:head>
+<f:view>
+	<body>
+
+		<div class="container">
+			<nav class="navbar navbar-default navbar-static-top"
+				role="navigation" style="margin-bottom: 0">
+				<ui:include src="../include/sidebar.xhtml" />
+			</nav>
+			<ui:include src="../include/modal.xhtml" />
+			<div>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="page-header">
+							<h1 id="navbar">Create Account</h1>
+						</div>
+
+						<div class="bs-component">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>Accounts - Create Account</h4>
+								</div>
+								<div class="panel-body">
+									<div class="row" style="margin-top: 40px">
+										<div class="col-md-2"></div>
+										<div class="col-md-8">
+											<h:form id="form" class="form-horizontal" prependId="false"
+												onsubmit="return onCheck(this)">
+												<div class="form-group has-success ">
+													<label class="control-label col-md-4" for="inputSuccess">
+														Account ID </label>
+													<div class="col-md-6">
+														<h:inputText class="form-control" id="acctID"
+															p:placeholder=" A 10-Character Number "
+															value="#{accountCreateMB.currentAccount.accountNumber}">
+														</h:inputText>
+													</div>
+												</div>
+
+												<div class="form-group has-success "
+													style="margin-top: 20px">
+													<label class="control-label col-md-4" for="inputSuccess">
+														User ID </label>
+													<div class="col-md-6">
+														<h:inputText class="form-control" id="usrID"
+															p:placeholder=" Number or Character Formatted "
+															value="#{accountCreateMB.currentAccount.customerID}">
+														</h:inputText>
+													</div>
+												</div>
+
+												<div class="form-group has-error " style="margin-top: 20px">
+													<label class="control-label col-md-4" for="inputSuccess">
+														Balance </label>
+													<div class="col-md-6">
+														<h:inputText class="form-control" id="Balance"
+															p:placeholder=" Balance of this Account "
+															value="#{accountCreateMB.currentAccount.balance}">
+														</h:inputText>
+													</div>
+												</div>
+												<h:commandButton class="btn btn-primary center-block"
+													value=" Create Account "
+													style="margin-bottom:40px; margin-top: 30px"
+													action="#{accountCreateMB.createAccount()}">
+												</h:commandButton>
+											</h:form>
+										</div>
+										<div class="col-md-2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ui:include src="../include/footer.xhtml" />
+
+		<script type="text/javascript" src="../js/check.js"></script>
+		<script>
+			function onCheck(form) {
+				var sourceAccount = document.getElementById("acctID").value;
+				var balance = document.getElementById("Balance").value;
+				var userId = document.getElementById("usrID").value;
+				var checkMessage = "";
+				checkMessage = checkaccount(sourceAccount)
+						+ checkuserid(userId) + checkbalance(balance);
+				if (checkMessage == "") {
+					return true;
+				} else {
+					var str = "<br />" + checkMessage
+							+ " please check it again." + "<br /><br />";
+					document.getElementById('message').innerHTML = str;
+					document.getElementById('message').style.fontSize = "20px"
+					$("#modal").modal('show');
+					return false;
+				}
+			}
+		</script>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+		<script src="../dist/js/sb-admin-2.js"></script>
+
+	</body>
+</f:view>
+
+</html>

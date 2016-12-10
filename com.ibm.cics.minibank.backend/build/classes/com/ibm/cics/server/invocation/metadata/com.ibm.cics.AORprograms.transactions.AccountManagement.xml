@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<linkableTargets xmlns:ns2="http://www.ibm.com/xmlns/prod/CICS/smw2int" xmlns="http://www.ibm.com/xmlns/prod/cics/link">
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.AccountManagement">
+        <method name="createAccount"/>
+        <bean name="LinkBean_1fc8c70cfabbf04d66b29ad4b37bdfbe" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="CREATACT"/>
+    </linkableTargetMetadata>
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.AccountManagement">
+        <method name="queryAccount"/>
+        <bean name="LinkBean_9e7fc99c7e4c4a46c78331216b995d43" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="QUERYACT"/>
+    </linkableTargetMetadata>
+</linkableTargets>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<linkableTargets xmlns:ns2="http://www.ibm.com/xmlns/prod/CICS/smw2int" xmlns="http://www.ibm.com/xmlns/prod/cics/link">
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.TransactionManagement">
+        <method name="withDraw"/>
+        <bean name="LinkBean_51b82ec790a1041e0d226290c2cc5947" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="WITHDRAW"/>
+    </linkableTargetMetadata>
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.TransactionManagement">
+        <method name="deposit"/>
+        <bean name="LinkBean_7667bbd203bb36c1006eb10874d57771" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="DEPOSIT"/>
+    </linkableTargetMetadata>
+</linkableTargets>

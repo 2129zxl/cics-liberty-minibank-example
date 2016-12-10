@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<linkableTargets xmlns:ns2="http://www.ibm.com/xmlns/prod/CICS/smw2int" xmlns="http://www.ibm.com/xmlns/prod/cics/link">
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.UserManagement">
+        <method name="queryUser"/>
+        <bean name="LinkBean_f849904bf4b28153673b02566aee331f" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="QUERYUSR"/>
+    </linkableTargetMetadata>
+    <linkableTargetMetadata className="com.ibm.cics.AORprograms.transactions.UserManagement">
+        <method name="createUser"/>
+        <bean name="LinkBean_b0a2fc4443b557210f6cafa9aecafe75" proxy="true"/>
+        <ns2:cicsdefinitionprogram name="CRETUSER"/>
+    </linkableTargetMetadata>
+</linkableTargets>

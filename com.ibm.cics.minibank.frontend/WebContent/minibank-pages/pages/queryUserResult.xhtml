@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>IBM - MiniBank - Query User Result</title>
+	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<link href="../bower_components/metisMenu/dist/metisMenu.min.css"
+		rel="stylesheet" />
+	<link href="../dist/css/sb-admin-2.css" rel="stylesheet" />
+	<link href="../bower_components/font-awesome/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+</h:head>
+
+<body>
+
+	<div class="container">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation"
+			style="margin-bottom: 0">
+			<ui:include src="../include/sidebar.xhtml" />
+		</nav>
+		<div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="page-header">
+						<h1 id="navbar">Customer Info</h1>
+					</div>
+
+					<div class="bs-component">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4>Customer Information</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row" style="margin-top: 40px">
+									<div class="col-md-1"></div>
+									<div class="col-md-12">
+										<div class="table-responsive">
+											<table class="table table-bordered table-striped">
+												<thead>
+													<tr>
+														<th>customerID</th>
+														<th>userName</th>
+														<th>userGender</th>
+														<th>age</th>
+														<th>address</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><h:outputText
+																value="#{userQueryMB.queryResult.customerID}" /></td>
+														<td><h:outputText
+																value="#{userQueryMB.queryResult.userName}" /></td>
+														<td><h:outputText
+																value="#{userQueryMB.queryResult.userGender}" /></td>
+														<td><h:outputText
+																value="#{userQueryMB.queryResult.age}" /></td>
+														<td><h:outputText
+																value="#{userQueryMB.queryResult.address}" /></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="col-md-1"></div>
+								</div>
+								<!-- /.row (nested) -->
+							</div>
+							<!-- /.panel-body -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="page-header">
+						<h1 id="navbar">Accounts of the customer</h1>
+					</div>
+
+					<div class="bs-component">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4>Customer Accounts</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row" style="margin-top: 40px">
+									<div class="col-md-1"></div>
+									<div class="col-md-10">
+										<div class="table-responsive">
+											<table width="100%"
+												class="table table-striped table-bordered table-hover"
+												id="dataTables-example">
+												<thead>
+													<tr>
+														<th>account Number</th>
+														<th>balance</th>
+														<th>lastChangeTime</th>
+													</tr>
+												</thead>
+												<tbody>
+													<ui:repeat var="account"
+														value="#{userQueryMB.queryResult.accountSet}">
+														<tr>
+															<td>#{account.accountNumber}</td>
+															<td>#{account.balance}</td>
+															<td>#{account.lastChangeTime}</td>
+														</tr>
+													</ui:repeat>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="col-md-1"></div>
+								</div>
+								<!-- /.row (nested) -->
+							</div>
+							<!-- /.panel-body -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+	<!-- /#wrapper -->
+
+	<ui:include src="../include/footer.xhtml" />
+
+	<!-- jQuery -->
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	<script
+		src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script
+		src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+	<script
+		src="../bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+
+
+	<!-- Custom Theme JavaScript -->
+	<script src="../dist/js/sb-admin-2.js"></script>
+	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+	<script>
+		$(document).ready(function() {
+			$('#dataTables-example').DataTable({
+				responsive : true
+			});
+		});
+	</script>
+
+</body>
+
+</html>
