@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><cicsdefinitionpipeline xmlns="http://www.ibm.com/xmlns/prod/CICS/smw2int" configfile="jsonjavaprovider.xml" description="pipeline for zos connection" name="ZOSCONN" wsdir="/u/cntest7/json/minibank/wsbind/"/>

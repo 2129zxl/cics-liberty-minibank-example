@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><cicsdefinitionprogram description="REMOTE PROGRAM POINTING TO JOR" jvm="NO" name="CRETACCT" remotename="WITHDRAW" remotesystem="${WOR.DPL.Remote_System}" transid="WDRJ" xmlns="http://www.ibm.com/xmlns/prod/CICS/smw2int"/>
